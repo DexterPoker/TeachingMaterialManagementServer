@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="bean.Classstudent" table="classstudent" schema="" catalog="teachingmaterialmanagement">
+        <composite-id mapped="true" class="bean.ClassstudentPK">
+            <key-property name="classClassId">
+                <column name="Class_ClassID" sql-type="int" not-null="true"/>
+            </key-property>
+            <key-property name="usersUserId">
+                <column name="Users_UserID" sql-type="int" not-null="true"/>
+            </key-property>
+        </composite-id>
+        <property name="status">
+            <column name="Status" sql-type="int" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

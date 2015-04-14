@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="bean.Message" table="message" schema="" catalog="teachingmaterialmanagement">
+        <id name="messageId">
+            <column name="MessageID" sql-type="int" not-null="true"/>
+        </id>
+        <property name="fileId">
+            <column name="FileID" sql-type="int" not-null="true"/>
+        </property>
+        <property name="classId">
+            <column name="ClassID" sql-type="int"/>
+        </property>
+        <property name="userId">
+            <column name="UserID" sql-type="int"/>
+        </property>
+        <property name="status">
+            <column name="Status" sql-type="int" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

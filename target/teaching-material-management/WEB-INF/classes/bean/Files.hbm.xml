@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="bean.Files" table="file" schema="" catalog="teachingmaterialmanagement">
+        <id name="fileId">
+            <column name="FileID" sql-type="int" not-null="true"/>
+        </id>
+        <property name="fileName">
+            <column name="FileName" sql-type="varchar" length="45" not-null="true"/>
+        </property>
+        <property name="filePath">
+            <column name="FilePath" sql-type="varchar" length="45" not-null="true"/>
+        </property>
+        <property name="fileType">
+            <column name="FileType" sql-type="varchar" length="45" not-null="true"/>
+        </property>
+        <property name="description">
+            <column name="Description" sql-type="varchar" length="200" not-null="true"/>
+        </property>
+        <property name="ownerId">
+            <column name="OwnerID" sql-type="int" not-null="true"/>
+        </property>
+        <property name="sumitter">
+            <column name="Sumitter" sql-type="int" not-null="true"/>
+        </property>
+        <property name="classId">
+            <column name="ClassID" sql-type="int" not-null="true"/>
+        </property>
+        <property name="downCount">
+            <column name="DownCount" sql-type="int" not-null="true"/>
+        </property>
+        <property name="supportCount">
+            <column name="SupportCount" sql-type="int" not-null="true"/>
+        </property>
+        <property name="isResuing">
+            <column name="IsResuing" sql-type="int" not-null="true"/>
+        </property>
+        <property name="status">
+            <column name="Status" sql-type="int" not-null="true"/>
+        </property>
+        <property name="createTime">
+            <column name="CreateTime" sql-type="timestamp" not-null="true"/>
+        </property>
+        <property name="className">
+            <column name="ClassName" sql-type="varchar" length="45" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
